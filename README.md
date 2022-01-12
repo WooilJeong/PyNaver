@@ -18,27 +18,25 @@ pip install PyNaver
 
 ## 예제
 
+### Datalab 기능 불러오기
 ```python
 from PyNaver import Datalab
-from config import Config
-
-config = Config()
 ```
 
-
+### 클라이언트 ID, SECRET 입력
 ```python
 # 네이버 데이터랩 API 클라이언트 ID, SECRET
-client_id = config.OPEN_API['naver']['client_id']
-client_secret = config.OPEN_API['naver']['client_secret']
+client_id = "클라이언트 ID"
+client_secret = "클라이언트 SECRET"
 ```
 
-
+### 네이버 데이터랩 API 세션 정의
 ```python
 # 네이버 데이터랩 API 세션 정의
 DL = Datalab(client_id, client_secret)
 ```
 
-
+### 검색어 그룹 세트 정의
 ```python
 # 검색어 그룹 세트 정의하기
 keyword_group_set = {
@@ -50,7 +48,7 @@ keyword_group_set = {
 }
 ```
 
-
+### 결과 데이터 조회
 ```python
 # 요청 파라미터 설정
 startDate = "2021-01-01"
