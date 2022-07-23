@@ -1,18 +1,19 @@
 import setuptools
+from PyNaver.config.info import __version__, __author__, __contact__, __github__
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
     name="PyNaver",
-    version="0.0.1",
+    version=__version__,
     license='MIT',
-    author="Wooil Jeong",
-    author_email="wooil@kakao.com",
-    description="naver open api for python",
+    author=__author__,
+    author_email=__contact__,
+    description="Naver Open API Python Wrapper",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/WooilJeong/PyNaver",
+    url=__github__,
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
