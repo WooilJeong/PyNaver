@@ -4,7 +4,7 @@ import pandas as pd
 
 class Naver:
     """
-    네이버 API 클래스
+    네이버 OPEN API 클래스
     """
 
     def __init__(self, client_id, client_secret):
@@ -264,9 +264,40 @@ class Naver:
         else:
             return res
 
+    def papago_n2mt(self, **kwargs):
+        """
+        Papago 번역
+        - API 레퍼런스: https://developers.naver.com/docs/papago/papago-nmt-api-reference.md
+        """
+        url = "https://openapi.naver.com/v1/papago/n2mt"
+        data = {}
+        for k, v in kwargs.items():
+            data[k] = v
+        data = json.dumps(data, ensure_ascii=False).encode("utf-8")
+        res = requests.post(url, data=data, headers=self.headers)
+        if res.status_code == 200:
+            return res.json()['message']['result']['translatedText']
+        else:
+            return res
+
+    def krdict_romanization(self, **kwargs):
+        """
+        한글 인명-로마자 변환
+        - API 레퍼런스: https://developers.naver.com/docs/papago/papago-romanization-api-reference.md
+        """
+        url = "https://openapi.naver.com/v1/krdict/romanization?"
+        for k, v in kwargs.items():
+            url += f"{k}={v}&"
+        res = requests.get(url, headers=self.headers)
+        if res.status_code == 200:
+            return pd.DataFrame(res.json()['aResult'][0]['aItems'])
+        else:
+            return res
+
+
 class NaverCloudPlatform:
     """
-    네이버 클라우드 플랫폼 API 클래스
+    네이버 클라우드 플랫폼 OPEN API 클래스
     """
     def __init__(self, client_id, client_secret):
         """
@@ -325,6 +356,34 @@ class NaverCloudPlatform:
         for k, v in kwargs.items():
             url += f"{k}={v}&"
         res = requests.get(url, headers=self.headers)
+        if res.status_code == 200:
+            return res.json()
+        else:
+            return res
+
+
+class Map:
+    """
+    네이버 지도 API 클래스
+    """
+    def _init_(self):
+        pass
+
+    def transit_directions_point_to_point(self, **kwargs):
+        """
+        네이버 지도 길찾기 대중교통 API
+        """
+        url = "https://map.naver.com/v5/api/transit/directions/point-to-point?"
+        params = {
+            "crs": "EPSG:4326",
+            "mode": "TIME",
+            "lang": "ko",
+            "includeDetailOperation": "true",
+        }
+        kwargs.update(params)
+        for k, v in kwargs.items():
+            url += f"{k}={v}&"
+        res = requests.get(url)
         if res.status_code == 200:
             return res.json()
         else:
