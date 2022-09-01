@@ -2,7 +2,8 @@
 
 [![PyPI Latest Release](https://img.shields.io/pypi/v/pynaver.svg)](https://pypi.org/project/pynaver/)
 ![](https://img.shields.io/badge/python-3.8-blue.svg)
-![](https://img.shields.io/badge/pandas-1.3.5-red.svg)
+![](https://img.shields.io/badge/pandas-1.4.4-red.svg)
+![](https://img.shields.io/badge/requests-2.28.1-yellow.svg)
 ![](https://img.shields.io/badge/api-naver-green.svg)
 
 ## 기여자
