@@ -321,13 +321,97 @@ class Naver:
             return pd.DataFrame(res.json()['items'])
         else:
             return res
+        
+    def search_book(self, **kwargs):
+        """
+        검색 책
+        - API 레퍼런스: https://developers.naver.com/docs/serviceapi/search/book/book.md#%EC%B1%85
+        """
+        url = "https://openapi.naver.com/v1/search/book.json?"
+        for k, v in kwargs.items():
+            url += f"{k}={v}&"
+        res = requests.get(url, headers=self.headers)
+        if res.status_code == 200:
+            return pd.DataFrame(res.json()['items'])
+        else:
+            return res
+        
+    def search_encyc(self, **kwargs):
+        """
+        검색 백과사전
+        - API 레퍼런스: https://developers.naver.com/docs/serviceapi/search/encyclopedia/encyclopedia.md
+        """
+        url = "https://openapi.naver.com/v1/search/encyc.json?"
+        for k, v in kwargs.items():
+            url += f"{k}={v}&"
+        res = requests.get(url, headers=self.headers)
+        if res.status_code == 200:
+            return pd.DataFrame(res.json()['items'])
+        else:
+            return res
 
-    def search_shop(self, **kwargs):
+    def search_movie(self, **kwargs):
         """
-        검색 쇼핑
-        - API 레퍼런스: https://developers.naver.com/docs/serviceapi/search/shopping/shopping.md
+        검색 영화
+        - API 레퍼런스: https://developers.naver.com/docs/serviceapi/search/movie/movie.md
         """
-        url = "https://openapi.naver.com/v1/search/shop.json?"
+        url = "https://openapi.naver.com/v1/search/movie.json?"
+        for k, v in kwargs.items():
+            url += f"{k}={v}&"
+        res = requests.get(url, headers=self.headers)
+        if res.status_code == 200:
+            return pd.DataFrame(res.json()['items'])
+        else:
+            return res
+
+    def search_cafearticle(self, **kwargs):
+        """
+        검색 카페글
+        - API 레퍼런스: https://developers.naver.com/docs/serviceapi/search/cafearticle/cafearticle.md
+        """
+        url = "https://openapi.naver.com/v1/search/cafearticle.json?"
+        for k, v in kwargs.items():
+            url += f"{k}={v}&"
+        res = requests.get(url, headers=self.headers)
+        if res.status_code == 200:
+            return pd.DataFrame(res.json()['items'])
+        else:
+            return res
+
+    def search_kin(self, **kwargs):
+        """
+        검색 지식인
+        - API 레퍼런스: https://developers.naver.com/docs/serviceapi/search/kin/kin.md
+        """
+        url = "https://openapi.naver.com/v1/search/kin.json?"
+        for k, v in kwargs.items():
+            url += f"{k}={v}&"
+        res = requests.get(url, headers=self.headers)
+        if res.status_code == 200:
+            return pd.DataFrame(res.json()['items'])
+        else:
+            return res
+
+    def search_webkr(self, **kwargs):
+        """
+        검색 웹문서
+        - API 레퍼런스: https://developers.naver.com/docs/serviceapi/search/web/web.md
+        """
+        url = "https://openapi.naver.com/v1/search/webkr.json?"
+        for k, v in kwargs.items():
+            url += f"{k}={v}&"
+        res = requests.get(url, headers=self.headers)
+        if res.status_code == 200:
+            return pd.DataFrame(res.json()['items'])
+        else:
+            return res
+
+    def search_image(self, **kwargs):
+        """
+        검색 이미지
+        - API 레퍼런스: https://developers.naver.com/docs/serviceapi/search/image/image.md
+        """
+        url = "https://openapi.naver.com/v1/search/image?"
         for k, v in kwargs.items():
             url += f"{k}={v}&"
         res = requests.get(url, headers=self.headers)
@@ -342,6 +426,34 @@ class Naver:
         - API 레퍼런스: https://developers.naver.com/docs/serviceapi/search/local/local.md
         """
         url = "https://openapi.naver.com/v1/search/local.json?"
+        for k, v in kwargs.items():
+            url += f"{k}={v}&"
+        res = requests.get(url, headers=self.headers)
+        if res.status_code == 200:
+            return pd.DataFrame(res.json()['items'])
+        else:
+            return res
+        
+    def search_shop(self, **kwargs):
+        """
+        검색 쇼핑
+        - API 레퍼런스: https://developers.naver.com/docs/serviceapi/search/shopping/shopping.md
+        """
+        url = "https://openapi.naver.com/v1/search/shop.json?"
+        for k, v in kwargs.items():
+            url += f"{k}={v}&"
+        res = requests.get(url, headers=self.headers)
+        if res.status_code == 200:
+            return pd.DataFrame(res.json()['items'])
+        else:
+            return res
+        
+    def search_doc(self, **kwargs):
+        """
+        검색 전문자료
+        - API 레퍼런스: https://developers.naver.com/docs/serviceapi/search/doc/doc.md
+        """
+        url = "https://openapi.naver.com/v1/search/doc.json?"
         for k, v in kwargs.items():
             url += f"{k}={v}&"
         res = requests.get(url, headers=self.headers)
