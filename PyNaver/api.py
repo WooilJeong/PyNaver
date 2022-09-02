@@ -294,6 +294,62 @@ class Naver:
         else:
             return res
 
+    def search_blog(self, **kwargs):
+        """
+        검색 블로그
+        - API 레퍼런스: https://developers.naver.com/docs/serviceapi/search/blog/blog.md
+        """
+        url = "https://openapi.naver.com/v1/search/blog.json?"
+        for k, v in kwargs.items():
+            url += f"{k}={v}&"
+        res = requests.get(url, headers=self.headers)
+        if res.status_code == 200:
+            return pd.DataFrame(res.json()['items'])
+        else:
+            return res
+
+    def search_news(self, **kwargs):
+        """
+        검색 뉴스
+        - API 레퍼런스: https://developers.naver.com/docs/serviceapi/search/news/news.md
+        """
+        url = "https://openapi.naver.com/v1/search/news.json?"
+        for k, v in kwargs.items():
+            url += f"{k}={v}&"
+        res = requests.get(url, headers=self.headers)
+        if res.status_code == 200:
+            return pd.DataFrame(res.json()['items'])
+        else:
+            return res
+
+    def search_shop(self, **kwargs):
+        """
+        검색 쇼핑
+        - API 레퍼런스: https://developers.naver.com/docs/serviceapi/search/shopping/shopping.md
+        """
+        url = "https://openapi.naver.com/v1/search/shop.json?"
+        for k, v in kwargs.items():
+            url += f"{k}={v}&"
+        res = requests.get(url, headers=self.headers)
+        if res.status_code == 200:
+            return pd.DataFrame(res.json()['items'])
+        else:
+            return res
+
+    def search_local(self, **kwargs):
+        """
+        검색 지역
+        - API 레퍼런스: https://developers.naver.com/docs/serviceapi/search/local/local.md
+        """
+        url = "https://openapi.naver.com/v1/search/local.json?"
+        for k, v in kwargs.items():
+            url += f"{k}={v}&"
+        res = requests.get(url, headers=self.headers)
+        if res.status_code == 200:
+            return pd.DataFrame(res.json()['items'])
+        else:
+            return res
+
 
 class NaverCloudPlatform:
     """
