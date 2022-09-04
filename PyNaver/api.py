@@ -535,16 +535,25 @@ class Map:
     네이버 지도 API 클래스
     """
     def __init__(self):
-        self.headers = {
-            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36',
-        }
+        pass
 
     def search(self, **kwargs):
         """
         네이버 지도 검색
         """
         url = "https://map.naver.com/v5/api/search?"
-
+        headers = {
+            'authority': 'map.naver.com',
+            'method': 'GET',
+            'scheme': 'https',
+            'accept': 'application/json, text/plain, */*',
+            'accept-encoding': 'gzip, deflate, br',
+            'accept-language': 'ko-KR,ko;q=0.8,en-US;q=0.6,en;q=0.4',
+            'cache-control': 'no-cache',
+            'content-type': 'application/json',
+            'referer': 'https://map.naver.com/',
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36',
+        }
         params = {
             "type": "all",
             "lang": "ko",
@@ -552,7 +561,7 @@ class Map:
         kwargs.update(params)
         for k, v in kwargs.items():
             url += f"{k}={v}&"
-        res = requests.get(url, headers=self.headers)
+        res = requests.get(url, headers=headers)
         if res.status_code == 200:
             return pd.DataFrame(res.json()['result']['place']['list'])
         else:
@@ -563,12 +572,24 @@ class Map:
         네이버 지도 장소 요약
         """
         url = f"https://map.naver.com/v5/api/sites/summary/{site_id}?"
+        headers = {
+            'authority': 'map.naver.com',
+            'method': 'GET',
+            'scheme': 'https',
+            'accept': 'application/json, text/plain, */*',
+            'accept-encoding': 'gzip, deflate, br',
+            'accept-language': 'ko-KR,ko;q=0.8,en-US;q=0.6,en;q=0.4',
+            'cache-control': 'no-cache',
+            'content-type': 'application/json',
+            'referer': 'https://map.naver.com/',
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36',
+        }
         params = {
             "lang": "ko",
         }
         for k, v in params.items():
             url += f"{k}={v}&"
-        res = requests.get(url, headers=self.headers)
+        res = requests.get(url, headers=headers)
         if res.status_code == 200:
             return res.json()
         else:
