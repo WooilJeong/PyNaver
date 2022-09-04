@@ -534,7 +534,7 @@ class Map:
     """
     네이버 지도 API 클래스
     """
-    def _init_(self):
+    def __init__(self):
         self.headers = {
             'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36',
         }
