@@ -535,13 +535,16 @@ class Map:
     네이버 지도 API 클래스
     """
     def _init_(self):
-        pass
+        self.headers = {
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36',
+        }
 
     def search(self, **kwargs):
         """
         네이버 지도 검색
         """
         url = "https://map.naver.com/v5/api/search?"
+
         params = {
             "type": "all",
             "lang": "ko",
@@ -549,7 +552,7 @@ class Map:
         kwargs.update(params)
         for k, v in kwargs.items():
             url += f"{k}={v}&"
-        res = requests.get(url)
+        res = requests.get(url, headers=self.headers)
         if res.status_code == 200:
             return pd.DataFrame(res.json()['result']['place']['list'])
         else:
@@ -565,7 +568,7 @@ class Map:
         }
         for k, v in params.items():
             url += f"{k}={v}&"
-        res = requests.get(url)
+        res = requests.get(url, headers=self.headers)
         if res.status_code == 200:
             return res.json()
         else:
