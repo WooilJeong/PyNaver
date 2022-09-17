@@ -30,9 +30,7 @@ PyNaver는 [naver developers](https://developers.naver.com/), [naver cloud platf
 pip install PyNaver
 ```
 
-<br>
-
-## 사용 방법 소개
+## 사용 방법
 - [PyNaver - 파이썬 네이버 API 라이브러리](https://wooiljeong.github.io/python/pynaver/)
 
 <br>
