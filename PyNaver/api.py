@@ -2,15 +2,20 @@ import json
 import requests
 import pandas as pd
 
+
 class Naver:
     """
     네이버 OPEN API 클래스
+
+    Parameters
+    ----------
+    client_id : string
+        네이버 개발자 센터에서 발급받은 클라이언트 ID
+    client_secret : string
+        네이버 개발자 센터에서 발급받은 클라이언트 SECRET
     """
 
     def __init__(self, client_id, client_secret):
-        """
-        API 인증 정보 초기화
-        """
         self.headers = {
             "X-Naver-Client-Id": client_id,
             "X-Naver-Client-Secret": client_secret,
@@ -321,7 +326,7 @@ class Naver:
             return pd.DataFrame(res.json()['items'])
         else:
             return res
-        
+
     def search_book(self, **kwargs):
         """
         검색 책
@@ -335,7 +340,7 @@ class Naver:
             return pd.DataFrame(res.json()['items'])
         else:
             return res
-        
+
     def search_encyc(self, **kwargs):
         """
         검색 백과사전
@@ -433,7 +438,7 @@ class Naver:
             return pd.DataFrame(res.json()['items'])
         else:
             return res
-        
+
     def search_shop(self, **kwargs):
         """
         검색 쇼핑
@@ -447,7 +452,7 @@ class Naver:
             return pd.DataFrame(res.json()['items'])
         else:
             return res
-        
+
     def search_doc(self, **kwargs):
         """
         검색 전문자료
@@ -466,16 +471,21 @@ class Naver:
 class NaverCloudPlatform:
     """
     네이버 클라우드 플랫폼 OPEN API 클래스
+
+    Parameters
+    ----------
+    client_id : string
+        네이버 클라우드 플랫폼에서 발급받은 클라이언트 ID
+    client_secret : string
+        네이버 클라우드 플랫폼에서 발급받은 클라이언트 SECRET
     """
+
     def __init__(self, client_id, client_secret):
-        """
-        API 인증 정보 초기화
-        """
         self.headers = {
             "X-NCP-APIGW-API-KEY-ID": client_id,
             "X-NCP-APIGW-API-KEY": client_secret,
         }
-        
+
     def geocoding(self, query):
         """
         지오코딩 API
@@ -500,7 +510,7 @@ class NaverCloudPlatform:
             return res.json()
         else:
             return res
-        
+
     def directions5(self, **kwargs):
         """
         Directions5 API
@@ -534,6 +544,7 @@ class Map:
     """
     네이버 지도 API 클래스
     """
+
     def __init__(self):
         pass
 
@@ -594,7 +605,6 @@ class Map:
             return res.json()
         else:
             return res
-
 
     def transit_directions_point_to_point(self, **kwargs):
         """
