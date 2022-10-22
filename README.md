@@ -107,8 +107,8 @@ res = ncp.geocoding(query)
 
 ## 기여자
 
-<a href="https://github.com/wooiljeong/publicdatareader/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=wooiljeong/publicdatareader" />
+<a href="https://github.com/wooiljeong/pynaver/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=wooiljeong/pynaver" />
 </a>
 
 <br>
