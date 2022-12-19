@@ -16,7 +16,7 @@
 
 ## PyNaver
 
-**PyNaver**는 [NAVER Developers](https://developers.naver.com/)와 [NAVER CLOUD PLATFORM](https://www.ncloud.com/)에서 제공하는 다양한 API를 파이썬으로 쉽게 사용할 수 있도록 해주는 라이브러리입니다. 그래서 PyNaver를 사용하면 **NAVER Developers**의 검색 API를 통해 웹문서, 이미지, 쇼핑, 전문자료 등을 검색할 수 있고, 파파고 API를 사용하면 Papago 번역, 한글인명-로마자 변환 기능을 이용할 수 있습니다. 단축 URL API를 사용하면 원래의 URL을 짧게 줄일 수 있고, **NAVER CLOUD PLATFORM**의 지오코딩 API를 이용하면 주소로 좌표 정보를 알아낼 수 있고, 리버스 지오코딩 API를 이용하면 좌표로 주소 정보를 알아낼 수 있습니다. 또한, Direction 5 및 Direction 15 API를 사용하면 출발지/목적지 정보에 따라 경로 관련 정보를 알아낼 수 있습니다.
+**PyNaver**는 [NAVER Developers](https://developers.naver.com/)와 [NAVER CLOUD PLATFORM](https://www.ncloud.com/)에서 제공하는 다양한 API를 파이썬으로 쉽게 사용할 수 있도록 해주는 라이브러리입니다. 그래서 PyNaver를 사용하면 **NAVER Developers**의 검색 API를 통해 웹문서, 이미지, 쇼핑, 전문자료 등을 검색할 수 있고, 파파고 API를 사용하면 Papago 번역, 한글인명-로마자 변환 기능을 이용할 수 있습니다. 단축 URL API를 사용하면 원래의 URL을 짧게 줄일 수도 있습니다. **NAVER CLOUD PLATFORM**의 지오코딩 API를 이용하면 주소로 좌표 정보를 알아낼 수 있고, 리버스 지오코딩 API를 이용하면 좌표로 주소 정보를 알아낼 수 있습니다. 또한, Direction 5 및 Direction 15 API를 사용하면 출발지/목적지 정보에 따라 경로 관련 정보를 알아낼 수 있습니다.
 
 <br>
 
