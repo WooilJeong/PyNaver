@@ -1,6 +1,6 @@
 <div align="center">
 
-<b>네이버 데이터 조회를 위한 오픈소스 로우코드 파이썬 라이브러리</b><br>
+<b>네이버 API를 사용하기 위한 오픈소스 파이썬 라이브러리</b><br>
 <b>🚀`pip install PyNaver --upgrade`</b>
 
 [![PyPI Latest Release](https://img.shields.io/pypi/v/pynaver.svg)](https://pypi.org/project/pynaver/)
@@ -16,17 +16,21 @@
 
 ## PyNaver
 
-PyNaver는 [naver developers](https://developers.naver.com/), [naver cloud platform](https://www.ncloud.com/)에서 제공하는 오픈 API를 이용할 수 있는 Python Client 입니다. PyNaver를 정상적으로 이용하기 위해서는 naver developers와 naver cloud platform의 애플리케이션 정보(Client ID, Client Secret)가 필요합니다.
+**PyNaver**는 [NAVER Developers](https://developers.naver.com/)와 [NAVER CLOUD PLATFORM](https://www.ncloud.com/)에서 제공하는 다양한 API를 파이썬으로 쉽게 사용할 수 있도록 해주는 라이브러리입니다. 그래서 PyNaver를 사용하면 **NAVER Developers**의 검색 API를 통해 웹문서, 이미지, 쇼핑, 전문자료 등을 검색할 수 있고, 파파고 API를 사용하면 Papago 번역, 한글인명-로마자 변환 기능을 이용할 수 있습니다. 단축 URL API를 사용하면 원래의 URL을 짧게 줄일 수 있고, **NAVER CLOUD PLATFORM**의 지오코딩 API를 이용하면 주소로 좌표 정보를 알아낼 수 있고, 리버스 지오코딩 API를 이용하면 좌표로 주소 정보를 알아낼 수 있습니다. 또한, Direction 5 및 Direction 15 API를 사용하면 출발지/목적지 정보에 따라 경로 관련 정보를 알아낼 수 있습니다.
 
 <br>
 
 ## 설치 방법
 
-- Windows: CMD(명령 프롬프트)를 열어 아래 Shell 명령어를 입력
-- Mac: Terminal(터미널)을 열어 아래 Shell 명령어를 입력
+1. 운영체제(OS)에 따라 아래 중 하나를 선택합니다.
+
+- Windows: CMD(명령 프롬프트) 실행
+- Mac: Terminal(터미널) 실행
+
+2. 아래 Shell 명령어를 입력 후 실행합니다.
 
 ```bash
-pip install PyNaver
+pip install PyNaver --upgrade
 ```
 
 <br>
@@ -44,7 +48,7 @@ client_id = ""
 client_secret = ""
 
 # 네이버 API 인스턴스 생성
-naver = Naver(client_id, client_secret)
+api = Naver(client_id, client_secret)
 
 # 파라미터
 startDate = "2022-01-01"
@@ -63,10 +67,7 @@ keywordGroups = [
 ]
 
 # 실행
-df = naver.datalab_search(startDate=startDate,
-                          endDate=endDate,
-                          timeUnit=timeUnit,
-                          keywordGroups=keywordGroups)
+df = api.datalab_search(startDate, endDate, timeUnit, keywordGroups)
 ```
 
 
@@ -80,13 +81,13 @@ client_id = ""
 client_secret = ""
 
 # 네이버 클라우드 플랫폼 API 인스턴스 생성
-ncp = NaverCloudPlatform(client_id, client_secret)
+api = NaverCloudPlatform(client_id, client_secret)
 
 # 주소
 query = "서초동 1303-22"
 
 # 실행
-res = ncp.geocoding(query)
+res = api.geocoding(query)
 ```
 
 <br>
