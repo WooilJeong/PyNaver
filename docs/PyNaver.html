@@ -107,20 +107,63 @@
 <p>네이버 지도 API 클래스</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.Map.search">
-<span class="sig-name descname"><span class="pre">search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Map.search" title="이 정의에 대한 퍼머링크"></a></dt>
+<span class="sig-name descname"><span class="pre">search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Map.search" title="이 정의에 대한 퍼머링크"></a></dt>
 <dd><p>네이버 지도 검색</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 검색어</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p>검색 결과</p>
+</dd>
+<dt class="field-odd">반환 형식</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.Map.sites_summary">
-<span class="sig-name descname"><span class="pre">sites_summary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">site_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Map.sites_summary" title="이 정의에 대한 퍼머링크"></a></dt>
+<span class="sig-name descname"><span class="pre">sites_summary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">site_id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Map.sites_summary" title="이 정의에 대한 퍼머링크"></a></dt>
 <dd><p>네이버 지도 장소 요약</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>site_id</strong> (<em>string</em>) – 장소 ID</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p>검색 결과</p>
+</dd>
+<dt class="field-odd">반환 형식</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.Map.transit_directions_point_to_point">
-<span class="sig-name descname"><span class="pre">transit_directions_point_to_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Map.transit_directions_point_to_point" title="이 정의에 대한 퍼머링크"></a></dt>
+<span class="sig-name descname"><span class="pre">transit_directions_point_to_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">goal</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Map.transit_directions_point_to_point" title="이 정의에 대한 퍼머링크"></a></dt>
 <dd><p>네이버 지도 길찾기 대중교통 API</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start</strong> (<em>string</em>) – 출발지 좌표</p></li>
+<li><p><strong>goal</strong> (<em>string</em>) – 도착지 좌표</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p>검색 결과</p>
+</dd>
+<dt class="field-odd">반환 형식</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -140,170 +183,536 @@
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.Naver.datalab_search">
-<span class="sig-name descname"><span class="pre">datalab_search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.datalab_search" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>네이버 통합 검색어 트렌드 조회
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/datalab/search/search.md">https://developers.naver.com/docs/serviceapi/datalab/search/search.md</a></p>
+<span class="sig-name descname"><span class="pre">datalab_search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">startDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeUnit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keywordGroups</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.datalab_search" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>네이버 통합 검색어 트렌드 조회</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>startDate</strong> (<em>string</em>) – 조회 시작일</p></li>
+<li><p><strong>endDate</strong> (<em>string</em>) – 조회 종료일</p></li>
+<li><p><strong>timeUnit</strong> (<em>string</em>) – 조회 기간</p></li>
+<li><p><strong>keywordGroups</strong> (<em>list</em>) – 키워드 그룹</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 키워드 그룹별 트렌드</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/datalab/search/search.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.Naver.datalab_shopping_categories">
-<span class="sig-name descname"><span class="pre">datalab_shopping_categories</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.datalab_shopping_categories" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>쇼핑인사이트 분야별 트렌드 조회
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md">https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</a></p>
+<span class="sig-name descname"><span class="pre">datalab_shopping_categories</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">startDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeUnit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.datalab_shopping_categories" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>쇼핑인사이트 분야별 트렌드 조회</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>startDate</strong> (<em>string</em>) – 조회 시작일</p></li>
+<li><p><strong>endDate</strong> (<em>string</em>) – 조회 종료일</p></li>
+<li><p><strong>timeUnit</strong> (<em>string</em>) – 구간 단위</p></li>
+<li><p><strong>category</strong> (<em>list</em>) – 분야</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 분야별 트렌드</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.Naver.datalab_shopping_category_age">
-<span class="sig-name descname"><span class="pre">datalab_shopping_category_age</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.datalab_shopping_category_age" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>쇼핑인사이트 분야 내 연령별 트렌드 조회
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md">https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</a></p>
+<span class="sig-name descname"><span class="pre">datalab_shopping_category_age</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">startDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeUnit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.datalab_shopping_category_age" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>쇼핑인사이트 분야 내 연령별 트렌드 조회</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>startDate</strong> (<em>string</em>) – 조회 시작일</p></li>
+<li><p><strong>endDate</strong> (<em>string</em>) – 조회 종료일</p></li>
+<li><p><strong>timeUnit</strong> (<em>string</em>) – 구간 단위</p></li>
+<li><p><strong>category</strong> (<em>list</em>) – 분야</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 분야 내 연령별 트렌드</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.Naver.datalab_shopping_category_device">
-<span class="sig-name descname"><span class="pre">datalab_shopping_category_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.datalab_shopping_category_device" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>쇼핑인사이트 분야 내 기기별 트렌드 조회
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md">https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</a></p>
+<span class="sig-name descname"><span class="pre">datalab_shopping_category_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">startDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeUnit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.datalab_shopping_category_device" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>쇼핑인사이트 분야 내 기기별 트렌드 조회</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>startDate</strong> (<em>string</em>) – 조회 시작일</p></li>
+<li><p><strong>endDate</strong> (<em>string</em>) – 조회 종료일</p></li>
+<li><p><strong>timeUnit</strong> (<em>string</em>) – 구간 단위</p></li>
+<li><p><strong>category</strong> (<em>list</em>) – 분야</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 분야 내 기기별 트렌드</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.Naver.datalab_shopping_category_gender">
-<span class="sig-name descname"><span class="pre">datalab_shopping_category_gender</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.datalab_shopping_category_gender" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>쇼핑인사이트 분야 내 성별 트렌드 조회
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md">https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</a></p>
+<span class="sig-name descname"><span class="pre">datalab_shopping_category_gender</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">startDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeUnit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.datalab_shopping_category_gender" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>쇼핑인사이트 분야 내 성별 트렌드 조회</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>startDate</strong> (<em>string</em>) – 조회 시작일</p></li>
+<li><p><strong>endDate</strong> (<em>string</em>) – 조회 종료일</p></li>
+<li><p><strong>timeUnit</strong> (<em>string</em>) – 구간 단위</p></li>
+<li><p><strong>category</strong> (<em>list</em>) – 분야</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 분야 내 성별 트렌드</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.Naver.datalab_shopping_category_keyword_age">
-<span class="sig-name descname"><span class="pre">datalab_shopping_category_keyword_age</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.datalab_shopping_category_keyword_age" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>쇼핑인사이트 키워드 연령별 트렌드 조회
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md">https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</a></p>
+<span class="sig-name descname"><span class="pre">datalab_shopping_category_keyword_age</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">startDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeUnit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyword</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.datalab_shopping_category_keyword_age" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>쇼핑인사이트 키워드 연령별 트렌드 조회</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>startDate</strong> (<em>string</em>) – 조회 시작일</p></li>
+<li><p><strong>endDate</strong> (<em>string</em>) – 조회 종료일</p></li>
+<li><p><strong>timeUnit</strong> (<em>string</em>) – 구간 단위</p></li>
+<li><p><strong>category</strong> (<em>list</em>) – 분야</p></li>
+<li><p><strong>keyword</strong> (<em>list</em>) – 키워드</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 키워드 연령별 트렌드</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.Naver.datalab_shopping_category_keyword_device">
-<span class="sig-name descname"><span class="pre">datalab_shopping_category_keyword_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.datalab_shopping_category_keyword_device" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>쇼핑인사이트 키워드 기기별 트렌드 조회
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md">https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</a></p>
+<span class="sig-name descname"><span class="pre">datalab_shopping_category_keyword_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">startDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeUnit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyword</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.datalab_shopping_category_keyword_device" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>쇼핑인사이트 키워드 기기별 트렌드 조회</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>startDate</strong> (<em>string</em>) – 조회 시작일</p></li>
+<li><p><strong>endDate</strong> (<em>string</em>) – 조회 종료일</p></li>
+<li><p><strong>timeUnit</strong> (<em>string</em>) – 구간 단위</p></li>
+<li><p><strong>category</strong> (<em>list</em>) – 분야</p></li>
+<li><p><strong>keyword</strong> (<em>list</em>) – 키워드</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 키워드 기기별 트렌드</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.Naver.datalab_shopping_category_keyword_gender">
-<span class="sig-name descname"><span class="pre">datalab_shopping_category_keyword_gender</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.datalab_shopping_category_keyword_gender" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>쇼핑인사이트 키워드 성별 트렌드 조회
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md">https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</a></p>
+<span class="sig-name descname"><span class="pre">datalab_shopping_category_keyword_gender</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">startDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeUnit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyword</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.datalab_shopping_category_keyword_gender" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>쇼핑인사이트 키워드 성별 트렌드 조회</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>startDate</strong> (<em>string</em>) – 조회 시작일</p></li>
+<li><p><strong>endDate</strong> (<em>string</em>) – 조회 종료일</p></li>
+<li><p><strong>timeUnit</strong> (<em>string</em>) – 구간 단위</p></li>
+<li><p><strong>category</strong> (<em>list</em>) – 분야</p></li>
+<li><p><strong>keyword</strong> (<em>list</em>) – 키워드</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 키워드 성별 트렌드</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.Naver.datalab_shopping_category_keywords">
-<span class="sig-name descname"><span class="pre">datalab_shopping_category_keywords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.datalab_shopping_category_keywords" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>쇼핑인사이트 키워드별 트렌드 조회
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md">https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</a></p>
+<span class="sig-name descname"><span class="pre">datalab_shopping_category_keywords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">startDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeUnit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyword</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.datalab_shopping_category_keywords" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>쇼핑인사이트 키워드별 트렌드 조회</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>startDate</strong> (<em>string</em>) – 조회 시작일</p></li>
+<li><p><strong>endDate</strong> (<em>string</em>) – 조회 종료일</p></li>
+<li><p><strong>timeUnit</strong> (<em>string</em>) – 구간 단위</p></li>
+<li><p><strong>category</strong> (<em>list</em>) – 분야</p></li>
+<li><p><strong>keyword</strong> (<em>list</em>) – 키워드</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 키워드별 트렌드</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.Naver.krdict_romanization">
-<span class="sig-name descname"><span class="pre">krdict_romanization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.krdict_romanization" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>한글 인명-로마자 변환
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/papago/papago-romanization-api-reference.md">https://developers.naver.com/docs/papago/papago-romanization-api-reference.md</a></p>
+<span class="sig-name descname"><span class="pre">krdict_romanization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.krdict_romanization" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>한글 인명-로마자 변환</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 변환할 한글 인명</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 변환된 로마자</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/papago/papago-romanization-api-reference.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.Naver.papago_n2mt">
-<span class="sig-name descname"><span class="pre">papago_n2mt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.papago_n2mt" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>Papago 번역
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/papago/papago-nmt-api-reference.md">https://developers.naver.com/docs/papago/papago-nmt-api-reference.md</a></p>
+<span class="sig-name descname"><span class="pre">papago_n2mt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.papago_n2mt" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>Papago 번역</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> (<em>string</em>) – 번역할 언어</p></li>
+<li><p><strong>target</strong> (<em>string</em>) – 번역될 언어</p></li>
+<li><p><strong>text</strong> (<em>string</em>) – 번역할 텍스트</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>string</em> – 번역된 텍스트</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/papago/papago-nmt-api-reference.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.Naver.search_blog">
-<span class="sig-name descname"><span class="pre">search_blog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.search_blog" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>검색 블로그
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/search/blog/blog.md">https://developers.naver.com/docs/serviceapi/search/blog/blog.md</a></p>
+<span class="sig-name descname"><span class="pre">search_blog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.search_blog" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>검색 블로그</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 검색어</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/search/blog/blog.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.Naver.search_book">
-<span class="sig-name descname"><span class="pre">search_book</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.search_book" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>검색 책
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/search/book/book.md#%EC%B1%85">https://developers.naver.com/docs/serviceapi/search/book/book.md#%EC%B1%85</a></p>
+<span class="sig-name descname"><span class="pre">search_book</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.search_book" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>검색 책</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 검색어</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/search/book/book.md#%EC%B1%85</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.Naver.search_cafearticle">
-<span class="sig-name descname"><span class="pre">search_cafearticle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.search_cafearticle" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>검색 카페글
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/search/cafearticle/cafearticle.md">https://developers.naver.com/docs/serviceapi/search/cafearticle/cafearticle.md</a></p>
+<span class="sig-name descname"><span class="pre">search_cafearticle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.search_cafearticle" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>검색 카페글</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 검색어</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/search/cafearticle/cafearticle.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.Naver.search_doc">
-<span class="sig-name descname"><span class="pre">search_doc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.search_doc" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>검색 전문자료
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/search/doc/doc.md">https://developers.naver.com/docs/serviceapi/search/doc/doc.md</a></p>
+<span class="sig-name descname"><span class="pre">search_doc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.search_doc" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>검색 전문자료</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 검색어</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/search/doc/doc.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.Naver.search_encyc">
-<span class="sig-name descname"><span class="pre">search_encyc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.search_encyc" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>검색 백과사전
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/search/encyclopedia/encyclopedia.md">https://developers.naver.com/docs/serviceapi/search/encyclopedia/encyclopedia.md</a></p>
+<span class="sig-name descname"><span class="pre">search_encyc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.search_encyc" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>검색 백과사전</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 검색어</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/search/encyclopedia/encyclopedia.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.Naver.search_image">
-<span class="sig-name descname"><span class="pre">search_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.search_image" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>검색 이미지
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/search/image/image.md">https://developers.naver.com/docs/serviceapi/search/image/image.md</a></p>
+<span class="sig-name descname"><span class="pre">search_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.search_image" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>검색 이미지</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 검색어</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/search/image/image.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.Naver.search_kin">
-<span class="sig-name descname"><span class="pre">search_kin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.search_kin" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>검색 지식인
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/search/kin/kin.md">https://developers.naver.com/docs/serviceapi/search/kin/kin.md</a></p>
+<span class="sig-name descname"><span class="pre">search_kin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.search_kin" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>검색 지식인</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 검색어</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/search/kin/kin.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.Naver.search_local">
-<span class="sig-name descname"><span class="pre">search_local</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.search_local" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>검색 지역
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/search/local/local.md">https://developers.naver.com/docs/serviceapi/search/local/local.md</a></p>
+<span class="sig-name descname"><span class="pre">search_local</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.search_local" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>검색 지역</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 검색어</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/search/local/local.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.Naver.search_movie">
-<span class="sig-name descname"><span class="pre">search_movie</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.search_movie" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>검색 영화
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/search/movie/movie.md">https://developers.naver.com/docs/serviceapi/search/movie/movie.md</a></p>
+<span class="sig-name descname"><span class="pre">search_movie</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.search_movie" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>검색 영화</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 검색어</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/search/movie/movie.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.Naver.search_news">
-<span class="sig-name descname"><span class="pre">search_news</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.search_news" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>검색 뉴스
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/search/news/news.md">https://developers.naver.com/docs/serviceapi/search/news/news.md</a></p>
+<span class="sig-name descname"><span class="pre">search_news</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.search_news" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>검색 뉴스</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 검색어</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/search/news/news.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.Naver.search_shop">
-<span class="sig-name descname"><span class="pre">search_shop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.search_shop" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>검색 쇼핑
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/search/shopping/shopping.md">https://developers.naver.com/docs/serviceapi/search/shopping/shopping.md</a></p>
+<span class="sig-name descname"><span class="pre">search_shop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.search_shop" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>검색 쇼핑</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 검색어</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/search/shopping/shopping.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.Naver.search_webkr">
-<span class="sig-name descname"><span class="pre">search_webkr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.search_webkr" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>검색 웹문서
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/search/web/web.md">https://developers.naver.com/docs/serviceapi/search/web/web.md</a></p>
+<span class="sig-name descname"><span class="pre">search_webkr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.search_webkr" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>검색 웹문서</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 검색어</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/search/web/web.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.Naver.util_shorturl">
 <span class="sig-name descname"><span class="pre">util_shorturl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.Naver.util_shorturl" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>단축 URL 요청(JSON)
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/utils/shortenurl/">https://developers.naver.com/docs/utils/shortenurl/</a></p>
+<dd><p>단축 URL 요청(JSON)</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><p><strong>url</strong> (<em>string</em>) – 원본 URL</p>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>dict</em> – 단축 URL</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/utils/shortenurl/</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -323,30 +732,88 @@
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.NaverCloudPlatform.directions15">
-<span class="sig-name descname"><span class="pre">directions15</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.NaverCloudPlatform.directions15" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>Directions15 API
-- API 레퍼런스: <a class="reference external" href="https://api.ncloud-docs.com/docs/ai-naver-mapsdirections15">https://api.ncloud-docs.com/docs/ai-naver-mapsdirections15</a></p>
+<span class="sig-name descname"><span class="pre">directions15</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">goal</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.NaverCloudPlatform.directions15" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>Directions15 API</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start</strong> (<em>string</em>) – 출발지 좌표</p></li>
+<li><p><strong>goal</strong> (<em>string</em>) – 도착지 좌표</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>dict</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://api.ncloud-docs.com/docs/ai-naver-mapsdirections15</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.NaverCloudPlatform.directions5">
-<span class="sig-name descname"><span class="pre">directions5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.NaverCloudPlatform.directions5" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>Directions5 API
-- API 레퍼런스: <a class="reference external" href="https://api.ncloud-docs.com/docs/ai-naver-mapsdirections">https://api.ncloud-docs.com/docs/ai-naver-mapsdirections</a></p>
+<span class="sig-name descname"><span class="pre">directions5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">goal</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.NaverCloudPlatform.directions5" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>Directions5 API</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start</strong> (<em>string</em>) – 출발지 좌표</p></li>
+<li><p><strong>goal</strong> (<em>string</em>) – 도착지 좌표</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>dict</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://api.ncloud-docs.com/docs/ai-naver-mapsdirections</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.NaverCloudPlatform.geocoding">
-<span class="sig-name descname"><span class="pre">geocoding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.NaverCloudPlatform.geocoding" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>지오코딩 API
-- API 레퍼런스: <a class="reference external" href="https://api.ncloud-docs.com/docs/ai-naver-mapsgeocoding">https://api.ncloud-docs.com/docs/ai-naver-mapsgeocoding</a></p>
+<span class="sig-name descname"><span class="pre">geocoding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.NaverCloudPlatform.geocoding" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>지오코딩 API</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 검색어</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>dict</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://api.ncloud-docs.com/docs/ai-naver-mapsgeocoding</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.api.NaverCloudPlatform.reverse_geocoding">
-<span class="sig-name descname"><span class="pre">reverse_geocoding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.NaverCloudPlatform.reverse_geocoding" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>리버스 지오코딩 API
-- API 레퍼런스: <a class="reference external" href="https://api.ncloud-docs.com/docs/ai-naver-mapsreversegeocoding">https://api.ncloud-docs.com/docs/ai-naver-mapsreversegeocoding</a></p>
+<span class="sig-name descname"><span class="pre">reverse_geocoding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coords</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.api.NaverCloudPlatform.reverse_geocoding" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>리버스 지오코딩 API</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>coords</strong> (<em>string</em>) – 좌표</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>dict</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://api.ncloud-docs.com/docs/ai-naver-mapsreversegeocoding</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -361,20 +828,63 @@
 <p>네이버 지도 API 클래스</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.Map.search">
-<span class="sig-name descname"><span class="pre">search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Map.search" title="이 정의에 대한 퍼머링크"></a></dt>
+<span class="sig-name descname"><span class="pre">search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Map.search" title="이 정의에 대한 퍼머링크"></a></dt>
 <dd><p>네이버 지도 검색</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 검색어</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p>검색 결과</p>
+</dd>
+<dt class="field-odd">반환 형식</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.Map.sites_summary">
-<span class="sig-name descname"><span class="pre">sites_summary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">site_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Map.sites_summary" title="이 정의에 대한 퍼머링크"></a></dt>
+<span class="sig-name descname"><span class="pre">sites_summary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">site_id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Map.sites_summary" title="이 정의에 대한 퍼머링크"></a></dt>
 <dd><p>네이버 지도 장소 요약</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>site_id</strong> (<em>string</em>) – 장소 ID</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p>검색 결과</p>
+</dd>
+<dt class="field-odd">반환 형식</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.Map.transit_directions_point_to_point">
-<span class="sig-name descname"><span class="pre">transit_directions_point_to_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Map.transit_directions_point_to_point" title="이 정의에 대한 퍼머링크"></a></dt>
+<span class="sig-name descname"><span class="pre">transit_directions_point_to_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">goal</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Map.transit_directions_point_to_point" title="이 정의에 대한 퍼머링크"></a></dt>
 <dd><p>네이버 지도 길찾기 대중교통 API</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start</strong> (<em>string</em>) – 출발지 좌표</p></li>
+<li><p><strong>goal</strong> (<em>string</em>) – 도착지 좌표</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p>검색 결과</p>
+</dd>
+<dt class="field-odd">반환 형식</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -394,170 +904,536 @@
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.Naver.datalab_search">
-<span class="sig-name descname"><span class="pre">datalab_search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.datalab_search" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>네이버 통합 검색어 트렌드 조회
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/datalab/search/search.md">https://developers.naver.com/docs/serviceapi/datalab/search/search.md</a></p>
+<span class="sig-name descname"><span class="pre">datalab_search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">startDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeUnit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keywordGroups</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.datalab_search" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>네이버 통합 검색어 트렌드 조회</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>startDate</strong> (<em>string</em>) – 조회 시작일</p></li>
+<li><p><strong>endDate</strong> (<em>string</em>) – 조회 종료일</p></li>
+<li><p><strong>timeUnit</strong> (<em>string</em>) – 조회 기간</p></li>
+<li><p><strong>keywordGroups</strong> (<em>list</em>) – 키워드 그룹</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 키워드 그룹별 트렌드</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/datalab/search/search.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.Naver.datalab_shopping_categories">
-<span class="sig-name descname"><span class="pre">datalab_shopping_categories</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.datalab_shopping_categories" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>쇼핑인사이트 분야별 트렌드 조회
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md">https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</a></p>
+<span class="sig-name descname"><span class="pre">datalab_shopping_categories</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">startDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeUnit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.datalab_shopping_categories" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>쇼핑인사이트 분야별 트렌드 조회</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>startDate</strong> (<em>string</em>) – 조회 시작일</p></li>
+<li><p><strong>endDate</strong> (<em>string</em>) – 조회 종료일</p></li>
+<li><p><strong>timeUnit</strong> (<em>string</em>) – 구간 단위</p></li>
+<li><p><strong>category</strong> (<em>list</em>) – 분야</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 분야별 트렌드</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.Naver.datalab_shopping_category_age">
-<span class="sig-name descname"><span class="pre">datalab_shopping_category_age</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.datalab_shopping_category_age" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>쇼핑인사이트 분야 내 연령별 트렌드 조회
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md">https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</a></p>
+<span class="sig-name descname"><span class="pre">datalab_shopping_category_age</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">startDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeUnit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.datalab_shopping_category_age" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>쇼핑인사이트 분야 내 연령별 트렌드 조회</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>startDate</strong> (<em>string</em>) – 조회 시작일</p></li>
+<li><p><strong>endDate</strong> (<em>string</em>) – 조회 종료일</p></li>
+<li><p><strong>timeUnit</strong> (<em>string</em>) – 구간 단위</p></li>
+<li><p><strong>category</strong> (<em>list</em>) – 분야</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 분야 내 연령별 트렌드</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.Naver.datalab_shopping_category_device">
-<span class="sig-name descname"><span class="pre">datalab_shopping_category_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.datalab_shopping_category_device" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>쇼핑인사이트 분야 내 기기별 트렌드 조회
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md">https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</a></p>
+<span class="sig-name descname"><span class="pre">datalab_shopping_category_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">startDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeUnit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.datalab_shopping_category_device" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>쇼핑인사이트 분야 내 기기별 트렌드 조회</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>startDate</strong> (<em>string</em>) – 조회 시작일</p></li>
+<li><p><strong>endDate</strong> (<em>string</em>) – 조회 종료일</p></li>
+<li><p><strong>timeUnit</strong> (<em>string</em>) – 구간 단위</p></li>
+<li><p><strong>category</strong> (<em>list</em>) – 분야</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 분야 내 기기별 트렌드</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.Naver.datalab_shopping_category_gender">
-<span class="sig-name descname"><span class="pre">datalab_shopping_category_gender</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.datalab_shopping_category_gender" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>쇼핑인사이트 분야 내 성별 트렌드 조회
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md">https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</a></p>
+<span class="sig-name descname"><span class="pre">datalab_shopping_category_gender</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">startDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeUnit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.datalab_shopping_category_gender" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>쇼핑인사이트 분야 내 성별 트렌드 조회</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>startDate</strong> (<em>string</em>) – 조회 시작일</p></li>
+<li><p><strong>endDate</strong> (<em>string</em>) – 조회 종료일</p></li>
+<li><p><strong>timeUnit</strong> (<em>string</em>) – 구간 단위</p></li>
+<li><p><strong>category</strong> (<em>list</em>) – 분야</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 분야 내 성별 트렌드</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.Naver.datalab_shopping_category_keyword_age">
-<span class="sig-name descname"><span class="pre">datalab_shopping_category_keyword_age</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.datalab_shopping_category_keyword_age" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>쇼핑인사이트 키워드 연령별 트렌드 조회
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md">https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</a></p>
+<span class="sig-name descname"><span class="pre">datalab_shopping_category_keyword_age</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">startDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeUnit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyword</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.datalab_shopping_category_keyword_age" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>쇼핑인사이트 키워드 연령별 트렌드 조회</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>startDate</strong> (<em>string</em>) – 조회 시작일</p></li>
+<li><p><strong>endDate</strong> (<em>string</em>) – 조회 종료일</p></li>
+<li><p><strong>timeUnit</strong> (<em>string</em>) – 구간 단위</p></li>
+<li><p><strong>category</strong> (<em>list</em>) – 분야</p></li>
+<li><p><strong>keyword</strong> (<em>list</em>) – 키워드</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 키워드 연령별 트렌드</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.Naver.datalab_shopping_category_keyword_device">
-<span class="sig-name descname"><span class="pre">datalab_shopping_category_keyword_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.datalab_shopping_category_keyword_device" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>쇼핑인사이트 키워드 기기별 트렌드 조회
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md">https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</a></p>
+<span class="sig-name descname"><span class="pre">datalab_shopping_category_keyword_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">startDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeUnit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyword</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.datalab_shopping_category_keyword_device" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>쇼핑인사이트 키워드 기기별 트렌드 조회</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>startDate</strong> (<em>string</em>) – 조회 시작일</p></li>
+<li><p><strong>endDate</strong> (<em>string</em>) – 조회 종료일</p></li>
+<li><p><strong>timeUnit</strong> (<em>string</em>) – 구간 단위</p></li>
+<li><p><strong>category</strong> (<em>list</em>) – 분야</p></li>
+<li><p><strong>keyword</strong> (<em>list</em>) – 키워드</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 키워드 기기별 트렌드</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.Naver.datalab_shopping_category_keyword_gender">
-<span class="sig-name descname"><span class="pre">datalab_shopping_category_keyword_gender</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.datalab_shopping_category_keyword_gender" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>쇼핑인사이트 키워드 성별 트렌드 조회
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md">https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</a></p>
+<span class="sig-name descname"><span class="pre">datalab_shopping_category_keyword_gender</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">startDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeUnit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyword</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.datalab_shopping_category_keyword_gender" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>쇼핑인사이트 키워드 성별 트렌드 조회</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>startDate</strong> (<em>string</em>) – 조회 시작일</p></li>
+<li><p><strong>endDate</strong> (<em>string</em>) – 조회 종료일</p></li>
+<li><p><strong>timeUnit</strong> (<em>string</em>) – 구간 단위</p></li>
+<li><p><strong>category</strong> (<em>list</em>) – 분야</p></li>
+<li><p><strong>keyword</strong> (<em>list</em>) – 키워드</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 키워드 성별 트렌드</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.Naver.datalab_shopping_category_keywords">
-<span class="sig-name descname"><span class="pre">datalab_shopping_category_keywords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.datalab_shopping_category_keywords" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>쇼핑인사이트 키워드별 트렌드 조회
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md">https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</a></p>
+<span class="sig-name descname"><span class="pre">datalab_shopping_category_keywords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">startDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endDate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeUnit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyword</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.datalab_shopping_category_keywords" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>쇼핑인사이트 키워드별 트렌드 조회</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>startDate</strong> (<em>string</em>) – 조회 시작일</p></li>
+<li><p><strong>endDate</strong> (<em>string</em>) – 조회 종료일</p></li>
+<li><p><strong>timeUnit</strong> (<em>string</em>) – 구간 단위</p></li>
+<li><p><strong>category</strong> (<em>list</em>) – 분야</p></li>
+<li><p><strong>keyword</strong> (<em>list</em>) – 키워드</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 키워드별 트렌드</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.Naver.krdict_romanization">
-<span class="sig-name descname"><span class="pre">krdict_romanization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.krdict_romanization" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>한글 인명-로마자 변환
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/papago/papago-romanization-api-reference.md">https://developers.naver.com/docs/papago/papago-romanization-api-reference.md</a></p>
+<span class="sig-name descname"><span class="pre">krdict_romanization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.krdict_romanization" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>한글 인명-로마자 변환</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 변환할 한글 인명</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 변환된 로마자</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/papago/papago-romanization-api-reference.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.Naver.papago_n2mt">
-<span class="sig-name descname"><span class="pre">papago_n2mt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.papago_n2mt" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>Papago 번역
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/papago/papago-nmt-api-reference.md">https://developers.naver.com/docs/papago/papago-nmt-api-reference.md</a></p>
+<span class="sig-name descname"><span class="pre">papago_n2mt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.papago_n2mt" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>Papago 번역</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> (<em>string</em>) – 번역할 언어</p></li>
+<li><p><strong>target</strong> (<em>string</em>) – 번역될 언어</p></li>
+<li><p><strong>text</strong> (<em>string</em>) – 번역할 텍스트</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>string</em> – 번역된 텍스트</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/papago/papago-nmt-api-reference.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.Naver.search_blog">
-<span class="sig-name descname"><span class="pre">search_blog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.search_blog" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>검색 블로그
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/search/blog/blog.md">https://developers.naver.com/docs/serviceapi/search/blog/blog.md</a></p>
+<span class="sig-name descname"><span class="pre">search_blog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.search_blog" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>검색 블로그</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 검색어</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/search/blog/blog.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.Naver.search_book">
-<span class="sig-name descname"><span class="pre">search_book</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.search_book" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>검색 책
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/search/book/book.md#%EC%B1%85">https://developers.naver.com/docs/serviceapi/search/book/book.md#%EC%B1%85</a></p>
+<span class="sig-name descname"><span class="pre">search_book</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.search_book" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>검색 책</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 검색어</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/search/book/book.md#%EC%B1%85</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.Naver.search_cafearticle">
-<span class="sig-name descname"><span class="pre">search_cafearticle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.search_cafearticle" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>검색 카페글
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/search/cafearticle/cafearticle.md">https://developers.naver.com/docs/serviceapi/search/cafearticle/cafearticle.md</a></p>
+<span class="sig-name descname"><span class="pre">search_cafearticle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.search_cafearticle" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>검색 카페글</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 검색어</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/search/cafearticle/cafearticle.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.Naver.search_doc">
-<span class="sig-name descname"><span class="pre">search_doc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.search_doc" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>검색 전문자료
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/search/doc/doc.md">https://developers.naver.com/docs/serviceapi/search/doc/doc.md</a></p>
+<span class="sig-name descname"><span class="pre">search_doc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.search_doc" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>검색 전문자료</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 검색어</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/search/doc/doc.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.Naver.search_encyc">
-<span class="sig-name descname"><span class="pre">search_encyc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.search_encyc" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>검색 백과사전
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/search/encyclopedia/encyclopedia.md">https://developers.naver.com/docs/serviceapi/search/encyclopedia/encyclopedia.md</a></p>
+<span class="sig-name descname"><span class="pre">search_encyc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.search_encyc" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>검색 백과사전</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 검색어</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/search/encyclopedia/encyclopedia.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.Naver.search_image">
-<span class="sig-name descname"><span class="pre">search_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.search_image" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>검색 이미지
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/search/image/image.md">https://developers.naver.com/docs/serviceapi/search/image/image.md</a></p>
+<span class="sig-name descname"><span class="pre">search_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.search_image" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>검색 이미지</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 검색어</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/search/image/image.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.Naver.search_kin">
-<span class="sig-name descname"><span class="pre">search_kin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.search_kin" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>검색 지식인
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/search/kin/kin.md">https://developers.naver.com/docs/serviceapi/search/kin/kin.md</a></p>
+<span class="sig-name descname"><span class="pre">search_kin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.search_kin" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>검색 지식인</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 검색어</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/search/kin/kin.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.Naver.search_local">
-<span class="sig-name descname"><span class="pre">search_local</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.search_local" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>검색 지역
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/search/local/local.md">https://developers.naver.com/docs/serviceapi/search/local/local.md</a></p>
+<span class="sig-name descname"><span class="pre">search_local</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.search_local" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>검색 지역</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 검색어</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/search/local/local.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.Naver.search_movie">
-<span class="sig-name descname"><span class="pre">search_movie</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.search_movie" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>검색 영화
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/search/movie/movie.md">https://developers.naver.com/docs/serviceapi/search/movie/movie.md</a></p>
+<span class="sig-name descname"><span class="pre">search_movie</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.search_movie" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>검색 영화</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 검색어</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/search/movie/movie.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.Naver.search_news">
-<span class="sig-name descname"><span class="pre">search_news</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.search_news" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>검색 뉴스
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/search/news/news.md">https://developers.naver.com/docs/serviceapi/search/news/news.md</a></p>
+<span class="sig-name descname"><span class="pre">search_news</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.search_news" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>검색 뉴스</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 검색어</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/search/news/news.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.Naver.search_shop">
-<span class="sig-name descname"><span class="pre">search_shop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.search_shop" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>검색 쇼핑
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/search/shopping/shopping.md">https://developers.naver.com/docs/serviceapi/search/shopping/shopping.md</a></p>
+<span class="sig-name descname"><span class="pre">search_shop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.search_shop" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>검색 쇼핑</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 검색어</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/search/shopping/shopping.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.Naver.search_webkr">
-<span class="sig-name descname"><span class="pre">search_webkr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.search_webkr" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>검색 웹문서
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/serviceapi/search/web/web.md">https://developers.naver.com/docs/serviceapi/search/web/web.md</a></p>
+<span class="sig-name descname"><span class="pre">search_webkr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.search_webkr" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>검색 웹문서</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 검색어</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>DataFrame</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/serviceapi/search/web/web.md</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.Naver.util_shorturl">
 <span class="sig-name descname"><span class="pre">util_shorturl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.Naver.util_shorturl" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>단축 URL 요청(JSON)
-- API 레퍼런스: <a class="reference external" href="https://developers.naver.com/docs/utils/shortenurl/">https://developers.naver.com/docs/utils/shortenurl/</a></p>
+<dd><p>단축 URL 요청(JSON)</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><p><strong>url</strong> (<em>string</em>) – 원본 URL</p>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>dict</em> – 단축 URL</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://developers.naver.com/docs/utils/shortenurl/</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -577,30 +1453,88 @@
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.NaverCloudPlatform.directions15">
-<span class="sig-name descname"><span class="pre">directions15</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.NaverCloudPlatform.directions15" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>Directions15 API
-- API 레퍼런스: <a class="reference external" href="https://api.ncloud-docs.com/docs/ai-naver-mapsdirections15">https://api.ncloud-docs.com/docs/ai-naver-mapsdirections15</a></p>
+<span class="sig-name descname"><span class="pre">directions15</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">goal</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.NaverCloudPlatform.directions15" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>Directions15 API</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start</strong> (<em>string</em>) – 출발지 좌표</p></li>
+<li><p><strong>goal</strong> (<em>string</em>) – 도착지 좌표</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>dict</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://api.ncloud-docs.com/docs/ai-naver-mapsdirections15</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.NaverCloudPlatform.directions5">
-<span class="sig-name descname"><span class="pre">directions5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.NaverCloudPlatform.directions5" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>Directions5 API
-- API 레퍼런스: <a class="reference external" href="https://api.ncloud-docs.com/docs/ai-naver-mapsdirections">https://api.ncloud-docs.com/docs/ai-naver-mapsdirections</a></p>
+<span class="sig-name descname"><span class="pre">directions5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">goal</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.NaverCloudPlatform.directions5" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>Directions5 API</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start</strong> (<em>string</em>) – 출발지 좌표</p></li>
+<li><p><strong>goal</strong> (<em>string</em>) – 도착지 좌표</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>dict</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://api.ncloud-docs.com/docs/ai-naver-mapsdirections</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.NaverCloudPlatform.geocoding">
-<span class="sig-name descname"><span class="pre">geocoding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.NaverCloudPlatform.geocoding" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>지오코딩 API
-- API 레퍼런스: <a class="reference external" href="https://api.ncloud-docs.com/docs/ai-naver-mapsgeocoding">https://api.ncloud-docs.com/docs/ai-naver-mapsgeocoding</a></p>
+<span class="sig-name descname"><span class="pre">geocoding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.NaverCloudPlatform.geocoding" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>지오코딩 API</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>string</em>) – 검색어</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>dict</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://api.ncloud-docs.com/docs/ai-naver-mapsgeocoding</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="PyNaver.NaverCloudPlatform.reverse_geocoding">
-<span class="sig-name descname"><span class="pre">reverse_geocoding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.NaverCloudPlatform.reverse_geocoding" title="이 정의에 대한 퍼머링크"></a></dt>
-<dd><p>리버스 지오코딩 API
-- API 레퍼런스: <a class="reference external" href="https://api.ncloud-docs.com/docs/ai-naver-mapsreversegeocoding">https://api.ncloud-docs.com/docs/ai-naver-mapsreversegeocoding</a></p>
+<span class="sig-name descname"><span class="pre">reverse_geocoding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coords</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyNaver.NaverCloudPlatform.reverse_geocoding" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>리버스 지오코딩 API</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>coords</strong> (<em>string</em>) – 좌표</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – 그 외 파라미터</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>dict</em> – 검색 결과</p></li>
+<li><p><strong>- API 레퍼런스</strong> (<em>https://api.ncloud-docs.com/docs/ai-naver-mapsreversegeocoding</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
