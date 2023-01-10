@@ -1,6 +1,6 @@
 <div align="center">
 
-![PNG](https://github.com/WooilJeong/PyNaver/blob/main/assets/img/logo.png?raw=true)
+<img src="https://github.com/WooilJeong/PyNaver/blob/main/assets/img/logo.png?raw=true" width="250" />
 
 
 <b>네이버 API를 사용하기 위한 오픈소스 파이썬 라이브러리</b><br>
