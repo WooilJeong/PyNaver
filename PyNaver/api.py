@@ -1045,6 +1045,55 @@ class NaverCloudPlatform:
         else:
             return res
 
+    def clova_summary(self,
+                      content=None,
+                      title=None,
+                      language="ko",
+                      model="general",
+                      tone=0,
+                      summaryCount=3,
+                      ):
+        """
+        Clova Summary API
+
+        Parameters
+        ----------
+        content : string, REQUIRED
+            요약할 내용
+        title : string, OPTIONAL
+            요약할 제목
+        language : string, REQUIRED (ko: 한국어, ja: 일본어) (미지정 시 기본 값: ko)
+            언어
+        model : string, OPTIONAL
+            모델 (general: 일반 문서 요약, news: 뉴스 요약) (미지정 시 기본 값: general)
+        tone : int, OPTIONAL
+            톤 (0: 원문의 어투를 유지, 1: 해요체, 2: 정중체, 3: 명사형 종결체) (미지정 시 기본 값: 0)
+        summaryCount : int, OPTIONAL
+            요약문 개수 (미지정 시 기본 값: 3)
+        """
+        url = "https://naveropenapi.apigw.ntruss.com/text-summary/v1/summarize"
+        params = {
+            "document": {
+                "content": content,
+                "title": title,
+            },
+            "option": {
+                "language": language,
+                "model": model,
+                "tone": tone,
+                "summaryCount": summaryCount,
+            },
+        }
+        headers = self.headers.copy()
+        headers.update({
+            "Content-Type": "application/json",
+        })
+        res = requests.post(url, headers=headers, json=params)
+        if res.status_code == 200:
+            return res.json()
+        else:
+            return res
+
 
 class Map:
     """
