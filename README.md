@@ -9,7 +9,8 @@
 [![PyPI Latest Release](https://img.shields.io/pypi/v/pynaver.svg)](https://pypi.org/project/pynaver/)
 [![License](https://img.shields.io/pypi/l/ansicolortags.svg)](https://img.shields.io/pypi/l/ansicolortags.svg)
 [![Python](https://img.shields.io/badge/Official-Docs-tomato)](https://wooiljeong.github.io/PyNaver/)
-![](https://img.shields.io/badge/API-NAVER-green.svg)  
+![](https://img.shields.io/badge/API-NAVER-green.svg)
+[![Downloads](https://static.pepy.tech/badge/pynaver)](https://pepy.tech/project/pynaver)  
 [![오픈채팅](https://img.shields.io/badge/오픈채팅-Q&A-yellow?logo=KakaoTalk)](https://open.kakao.com/o/gh1N1kJe)
 
 <br>
@@ -119,6 +120,6 @@ res = api.geocoding(query)
 
 <div align=center>
 
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FWooilJeong%2FPyNaver&count_bg=%2300CBFF&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+<!-- [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FWooilJeong%2FPyNaver&count_bg=%2300CBFF&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com) -->
 
 </div>
